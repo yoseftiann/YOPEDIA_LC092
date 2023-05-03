@@ -9,24 +9,24 @@ const FavoriteList = () => {
     const myFavorite = JSON.parse(storedValue);
     console.log(myFavorite)
 
-  return (
-    <div className='flex flex-row space-x-2 overflow-y-auto'>
+    return (
+        <div className='flex flex-row space-x-2 overflow-y-auto'>
             <style>{`
               ::-webkit-scrollbar {
                 display: none;
               }
             `}</style>
-        {
-            myFavorite.map((pokemon) => {
-                return (
-                    <Link key={pokemon.name} to={`/Detail/${pokemon.id}`}>
-                        <PokeCard name={pokemon.name} img={pokemon.image} id={pokemon.id}></PokeCard>
-                    </Link>
-                )
-            })
-        }
-    </div>
-  )
+            {
+                myFavorite && myFavorite.map((pokemon) => {
+                    return (
+                        <Link key={pokemon.name} to={`/Detail/${pokemon.id}`}>
+                            <PokeCard name={pokemon.name} img={pokemon.image} id={pokemon.id}></PokeCard>
+                        </Link>
+                    )
+                })
+            }
+        </div>
+    )
 }
 
 export default FavoriteList
