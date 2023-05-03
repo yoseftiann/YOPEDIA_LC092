@@ -16,20 +16,26 @@ const LeftDetailCard = (props) => {
   
   return (
     <div className="w-full h-full flex flex-col justify-around">
-        <div>
+        <div className=''>
             <i className='py-0 text-2xl'>#{data.pokemon.id}</i>
             <div className="w-full flex justify-center items-center uppercase font-extrabold text-6xl">
             <div className="max-w-lg">
                <span className='text-6xl sm:text-5xl md:text-4xl text-center flex items-center'>{data.pokemon.name}</span>
             </div>
             </div>
-        <div className='py-4 space-x-2 sm:space-x-1 font-light flex flex-row justify-between'>
-            <p className=''>Height :</p>
-            <p className=''>{data.pokemon.height}</p>
-            <p className=''>Weight :</p>
-            <p className=''>{data.pokemon.weight}</p>
-            <p className=''>Base Experience :</p>
-            <p className=''>{data.pokemon.base_experience}</p>
+        <div className='py-4 sm:space-x-1 p-0 m-0 font-light flex flex-row sm:flex-col justify-between'>
+            <div className='flex flex-row justify-between'>
+                <p className='pl-1'>Weight :</p>
+                <p className=''>{data.pokemon.weight}</p>
+            </div>
+            <div className='flex flex-row justify-between'>
+                <p className=''>Height :</p>
+                <p className=''>{data.pokemon.height}</p>
+            </div>
+            <div className='flex flex-row justify-between'>
+                <p className=''>Base Experience :</p>
+                <p className=''>{data.pokemon.base_experience}</p>
+            </div>
         </div>
         </div>
         <p className="py-4 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, sint. Pariatur expedita obcaecati amet fuga magni aut reprehenderit corrupti! Tempora illum magni autem pariatur dignissimos iusto vero aut laboriosam nulla!</p>
