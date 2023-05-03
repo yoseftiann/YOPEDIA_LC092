@@ -35,7 +35,7 @@ const NavBar = () => {
           {/* <li className={currentView === 'Favorite' ? 'text-black' : 'text-yellow-500'}  onClick={ () => navigate('/Favorite')}>FAVORITE</li> */}
         </ul>
         <div className="h-1/12 flex justify-center items-center pr-3">
-          <div className={currentView === '' ? 'text-white' : 'text-black'}>
+          <div className={currentView === '' ? 'text-yellow-300' : 'text-black'}>
             <SearchBar></SearchBar>
           </div>
         </div>

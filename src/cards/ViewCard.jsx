@@ -13,7 +13,13 @@ import FavoriteList from '../components/FavoriteList';
 const ViewCard = () => {
   const { loading, error, data } = useQuery(GET_ALL_POKEMON);
 
-  if (loading) return <Loading></Loading>
+  if (loading) return (
+    <div className='w-99% h-[100vh] flex flex-col justify-center items-center mx-8'>
+      <Loading></Loading>
+      <p className='text-black font-semibold'>This might take a moment, please wait...</p>
+      <p className='text-center'>for faster load you can try search and click something from the search bar</p>
+    </div>
+  )
   if (error) return <h1>Error...</h1>;
 
   console.log(data)
