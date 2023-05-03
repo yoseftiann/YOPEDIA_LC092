@@ -7,7 +7,12 @@ import HomeButton from "../utils/HomeButton";
 
 function HomeComp(){
     const {loading, error, data} = useQuery(GET_ALL_POKEMON);
-    if(loading)return <Loading></Loading>
+    if (loading) return (
+        <div className='w-99% h-[100vh] flex flex-col justify-center items-center mx-8'>
+          <Loading></Loading>
+          <p className='text-black font-semibold'>This might take a moment, please wait...</p>
+        </div>
+    )
     else if(error)return <h1>error...</h1>
     console.log(data);
 
