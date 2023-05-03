@@ -37,7 +37,7 @@ const ViewCard = () => {
               }
             `}</style>
           {
-            data.pokemons.results.slice(0,15).map((pokemon) => {
+            data.pokemons.results.slice(0,15)?.map((pokemon) => {
               return ( 
                 <Link key={pokemon.name} to={`/Detail/${pokemon.id}`}>
                    <PokeCard name={pokemon.name} img={pokemon.image} id={pokemon.id}></PokeCard>
